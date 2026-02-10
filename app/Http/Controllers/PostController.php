@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+public function principal(){
+    return view('principal');
+}
+
     public function Mensaje(){
         return "Hola desde el controlador de PostController";
 }
@@ -17,15 +22,12 @@ public function About($param=null, $nombre=null){
 }
 
 public function Contacto(){
-    return view ('contacto', ['mesaje'=>"Esto es un mensaje"]);
+    return view ('contacto', ['mensaje'=>"Esto es un mensaje"]);
 }
 
 public function llamado_componente(){
     return view('llamadocomponente');
 }
 
-public function principal(){
-    return view('principal');
-}
 
 }
